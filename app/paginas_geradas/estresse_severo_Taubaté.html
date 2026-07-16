@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento Especializado em Taubaté</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 20px auto; padding: 20px; }
+        .bloco { margin-bottom: 20px; padding: 15px; border-radius: 8px; }
+        #bloco-online { background: #f4f7f6; }
+        #bloco-local { background: #e8f4fd; display: none; border-left: 5px solid #2196F3; }
+    </style>
+</head>
+<body>
+    <div id="bloco-online" class="bloco">
+        {'titulo': 'Superando o Estresse Severo com o Suporte de um Psicólogo', 'subtitulo': 'Melhore sua qualidade de vida em apenas alguns cliques', 'descricao': 'Não deixe o estresse severo afetar sua vida. Nossa equipe de psicólogos experientes está à disposição para oferecer suporte e orientação através de atendimentos online', 'beneficios': ['Acesso rápido e fácil', 'Suporte em tempo real', 'Conforto da casa', 'Privacidade garantida'], 'chamada': 'Clique aqui para agendar sua consulta online!'}
+    </div>
+
+    <div id="bloco-local" class="bloco">
+        {'titulo': 'Encontre Alívio no Estresse Severo em Taubaté', 'subtitulo': 'Desbloqueie sua potencialidade com o suporte de um profissional de saúde mental', 'descricao': 'Nossa clinicar, localizada no centro de Taubaté, oferece um ambiente acolhedor e seguro para que você possa se sentir confortável em discutir seus problemas', 'beneficios': ['Ambiente acolhedor e seguro', 'Suporte de um psicólogo experiente', 'Localização central e acessível', 'Atendimento personalizado'], 'chamada': 'Clique aqui para saber mais sobre nossos serviços no local'}
+    </div>
+
+    <script>
+        fetch('https://ip-api.com/json/')
+            .then(response => response.json())
+            .then(data => {
+                if (data.city === "Taubaté") {
+                    document.getElementById('bloco-local').style.display = 'block';
+                }
+            })
+            .catch(e => console.log("Erro na geolocalização"));
+    </script>
+</body>
+</html>
+    
