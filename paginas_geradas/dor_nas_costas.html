@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta charset="UTF-8"><title>dor nas costas em São Paulo</title></head>
+<body>
+    <div id="conteudo"><h1>Tratamento para dor nas costas</h1><p>Atendimento especializado em São Paulo.</p></div>
+    <script>
+        fetch('https://ipapi.co/json/')
+            .then(r => r.json())
+            .then(d => { if (d.city === "São Paulo") console.log("Local ativado"); });
+    </script>
+</body></html>
