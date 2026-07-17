@@ -4,17 +4,20 @@ from dotenv import load_dotenv
 from groq import Groq
 from googleapiclient.discovery import build
 from oauth2client.service_account import ServiceAccountCredentials
+import subprocess
 
-# Debug para garantir que este arquivo está sendo carregado
-print("DEBUG: O arquivo services.py foi carregado com sucesso.")
+# Carregamento robusto das configurações
+caminho_env = os.path.join(os.path.dirname(__file__), 'keys', '.env')
+if not os.path.exists(caminho_env):
+    caminho_env = os.path.join(os.path.dirname(__file__), '.env')
+load_dotenv(caminho_env)
 
-# Carrega as configurações
-load_dotenv(os.path.join(os.path.dirname(__file__), 'keys', '.env'))
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+api_key = os.getenv("GROQ_API_KEY")
+print(f"DEBUG: Chave API carregada? {'SIM' if api_key else 'NÃO'}")
+client = Groq(api_key=api_key)
 
 # Função de IA (Camaleão Geográfico)
 def gerar_conteudo_ia(sintoma, cidade):
-    # Instrução ajustada para retornar conteúdo estruturado
     prompt = f"""
     Crie uma landing page persuasiva para psicólogo sobre {sintoma} em {cidade}.
     Retorne a resposta EXATAMENTE no seguinte formato JSON, sem texto extra:
@@ -29,12 +32,10 @@ def gerar_conteudo_ia(sintoma, cidade):
         model="llama-3.1-8b-instant",
         response_format={"type": "json_object"}
     )
-    
-    # Converte o retorno em dicionário Python
     return json.loads(chat_completion.choices[0].message.content)
 
-# Função para montar o HTML completo com o Script do Camaleão
-def gerar_pagina_html_completa(conteudo_ia, cidade_alvo):
+# Função atualizada: Gera o conteúdo, monta o HTML e SALVA O ARQUIVO automaticamente
+def gerar_pagina_html_completa(sintoma, regiao, conteudo_ia):
     online_txt = conteudo_ia.get("online", "")
     local_txt = conteudo_ia.get("local", "")
     
@@ -44,7 +45,7 @@ def gerar_pagina_html_completa(conteudo_ia, cidade_alvo):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atendimento Especializado em {cidade_alvo}</title>
+    <title>Atendimento Especializado em {regiao}</title>
     <style>
         body {{ font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 20px auto; padding: 20px; }}
         .bloco {{ margin-bottom: 20px; padding: 15px; border-radius: 8px; }}
@@ -53,19 +54,14 @@ def gerar_pagina_html_completa(conteudo_ia, cidade_alvo):
     </style>
 </head>
 <body>
-    <div id="bloco-online" class="bloco">
-        {online_txt}
-    </div>
-
-    <div id="bloco-local" class="bloco">
-        {local_txt}
-    </div>
+    <div id="bloco-online" class="bloco">{online_txt}</div>
+    <div id="bloco-local" class="bloco">{local_txt}</div>
 
     <script>
         fetch('https://ip-api.com/json/')
             .then(response => response.json())
             .then(data => {{
-                if (data.city === "{cidade_alvo}") {{
+                if (data.city === "{regiao}") {{
                     document.getElementById('bloco-local').style.display = 'block';
                 }}
             }})
@@ -74,7 +70,14 @@ def gerar_pagina_html_completa(conteudo_ia, cidade_alvo):
 </body>
 </html>
     """
-    return html_template
+    
+    os.makedirs("paginas_geradas", exist_ok=True)
+    nome_arquivo = f"paginas_geradas/{sintoma.replace(' ', '_').lower()}_{regiao.replace(' ', '_').lower()}.html"
+    
+    with open(nome_arquivo, "w", encoding="utf-8") as f:
+        f.write(html_template)
+    
+    return nome_arquivo
 
 # Função de indexação
 def indexar_url(url_para_indexar):
@@ -84,31 +87,18 @@ def indexar_url(url_para_indexar):
     try:
         credentials = ServiceAccountCredentials.from_json_keyfile_name(key_file, SCOPES)
         service = build('indexing', 'v3', credentials=credentials)
-        
-        body = {
-            'url': url_para_indexar,
-            'type': 'URL_UPDATED'
-        }
-        
+        body = {'url': url_para_indexar, 'type': 'URL_UPDATED'}
         request = service.urlNotifications().publish(body=body)
-        response = request.execute()
-        return str(response)
+        return str(request.execute())
     except Exception as e:
         return f"Erro na indexação: {str(e)}"
 
-import subprocess
-
+# Função de deploy (Github)
 def publicar_no_github(caminho_arquivo, mensagem_commit="Nova página gerada pelo Dominador"):
-    """
-    Realiza o deploy automático do arquivo gerado para o GitHub.
-    """
     try:
-        # Adiciona o arquivo específico ao Git
         subprocess.run(["git", "add", caminho_arquivo], check=True)
-        # Faz o commit
         subprocess.run(["git", "commit", "-m", mensagem_commit], check=True)
-        # Faz o push
         subprocess.run(["git", "push", "origin", "main"], check=True)
         return "Sucesso: Página publicada no GitHub!"
-    except subprocess.CalledProcessError as e:
-        return f"Erro no deploy: {str(e)}"        
+    except Exception as e:
+        return f"Erro no deploy: {str(e)}"

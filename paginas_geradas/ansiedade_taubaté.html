@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento Especializado em Taubaté</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 20px auto; padding: 20px; }
+        .bloco { margin-bottom: 20px; padding: 15px; border-radius: 8px; }
+        #bloco-online { background: #f4f7f6; }
+        #bloco-local { background: #e8f4fd; display: none; border-left: 5px solid #2196F3; }
+    </style>
+</head>
+<body>
+    <div id="bloco-online" class="bloco">Oferecemos atendimento online para pacientes que desejam superar a ansiedade de uma maneira confortável e acessível, sem a necessidade de deixar sua área. Nossos especialistas em psicologia trabalham com técnicas de terapia cognitivo-comportamental personalizadas para ajudá-lo a superar medos e sentimentos constrangedores.
+
+          -   Acessibilidade: você pode se conectar com nossos profissionais em qualquer lugar do mundo onde houver internet, o que torna nossa terapia online especialmente útil para aqueles que têm dificuldade em se deslocar.
+
+          -   Flexibilidade: planejamos sessões de terapia em horários com que você se comforte, garantindo que você possa se encaixar em seu calendário.
+
+          -   Especialista qualificado: nossa equipe de psicólogos é formada por profissionais experientes e qualificados na área de ansiedade, ansiedade de separação, depressão e transtornos alimentares.
+
+          -   Resultados: os nossos clientes relataram melhoras significativas na sua qualidade de vida após apenas algumas semanas de tratamento.
+
+          Para começar, basta entrar em contato conosco. Estamos aqui para prestar assistência e ajudá-lo a alcançar os seus objetivos.</div>
+    <div id="bloco-local" class="bloco">No nosso consultório em Taubaté você encontrará uma equipe de profissionais experientes e qualificados, que oferecem tratamento para ansiedade. Nossa estrutura oferece um ambiente seguro e acolhedor para você se sentir à vontade ao falar sobre seus sentimentos e pensamentos.
+
+  -   Localização estratégica: localizado no centro de Taubaté, para atender aos que residem na cidade e nos arredores.
+
+  -   Ambiente acolhedor: nossos consultórios são projetados para você se sentir confortável e tranquilo durante a sessão de terapia.
+
+  -   Diversas opções de horários: oferecemos agendamento em horários adaptados a sua necessidade, garantindo que você possa se encaixar no seu calendário.
+
+  -   Atendimento personalizado: os nossos psicólogos trabalham ao seu lado para criar um plano de tratamento direcionado, visando superar os seus problemas de ansiedade.
+
+  Entre em contato conosco para saber mais sobre os nossos serviços e horários disponíveis.</div>
+
+    <script>
+        fetch('https://ip-api.com/json/')
+            .then(response => response.json())
+            .then(data => {
+                if (data.city === "Taubaté") {
+                    document.getElementById('bloco-local').style.display = 'block';
+                }
+            })
+            .catch(e => console.log("Erro na geolocalização"));
+    </script>
+</body>
+</html>
+    
