@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head><meta charset="UTF-8"><title>ansiedade em Taubaté</title></head>
+<body>
+    <div id="conteudo"><h1>Tratamento para ansiedade</h1><p>Atendimento especializado em Taubaté.</p></div>
+    <script>
+        fetch('https://ipapi.co/json/')
+            .then(r => r.json())
+            .then(d => { if (d.city === "Taubaté") console.log("Local ativado"); });
+    </script>
+</body></html>
