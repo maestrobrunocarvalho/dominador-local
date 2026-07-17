@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atendimento Especializado em São Paulo</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 20px auto; padding: 20px; }
+        .bloco { margin-bottom: 20px; padding: 15px; border-radius: 8px; }
+        #bloco-online { background: #f4f7f6; }
+        #bloco-local { background: #e8f4fd; display: none; border-left: 5px solid #2196F3; }
+    </style>
+</head>
+<body>
+    <div id="bloco-online" class="bloco">{'title': 'Encontre apoio on-line para sua saúde mental', 'subtitle': 'Nossa equipe de psicólogos experientes está aqui para ajudar', 'beneficios': ['Atendimento à distância via vídeo chamada', 'Horários flexíveis e agendamento rápido', 'Terapia individualizada e personalizada'], 'chamada_acao': 'Agende agora o seu atendimento online'}</div>
+    <div id="bloco-local" class="bloco">{'title': 'Apoio emocional em São Paulo - Localíquenos e confiáveis', 'subtitle': 'Nossa equipe de psicólogos experientes, com sedes em São Paulo', 'beneficios': ['Localização estratégica em São Paulo', 'Horários flexíveis e agendamento rápido', 'Terapia individualizada e personalizada'], 'chamada_acao': 'Localize-nos hoje mesmo em São Paulo'}</div>
+
+    <script>
+        fetch('https://ip-api.com/json/')
+            .then(response => response.json())
+            .then(data => {
+                if (data.city === "São Paulo") {
+                    document.getElementById('bloco-local').style.display = 'block';
+                }
+            })
+            .catch(e => console.log("Erro na geolocalização"));
+    </script>
+</body>
+</html>
+    
