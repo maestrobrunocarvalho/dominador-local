@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicologia de Confiança - Ansiedade, Depressão e Burnout</title>
-    <meta name="description" content="Encontre apoio especializado para ansiedade, depressão e burnout. Nossa equipe de psicólogos está aqui para ajudá-lo a encontrar paz e equilíbrio em sua vida.">
-    <meta name="keywords" content="psicologia, ansiedade, depressão, burnout, saúde mental, apoio psicológico">
+    <title>Psicologia - Encontre Paz e Equilíbrio</title>
+    <meta name="description" content="Encontre paz e controle sobre seus pensamentos e emoções com estratégias eficazes para superar a ansiedade, burnout e depressão.">
+    <meta name="keywords" content="psicologia, ansiedade, burnout, depressão, saúde mental">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Psychologist",
-      "name": "Psicologia de Confiança",
-      "description": "Apoio especializado para ansiedade, depressão e burnout",
-      "telephone": "+55 11 1234-5678",
+      "name": "Psicologia - Encontre Paz e Equilíbrio",
+      "description": "Encontre paz e controle sobre seus pensamentos e emoções com estratégias eficazes para superar a ansiedade, burnout e depressão.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Exemplo, 123",
-        "addressLocality": "São Paulo",
-        "addressRegion": "SP",
-        "postalCode": "01234-567",
+        "addressLocality": "Cidade",
+        "addressRegion": "Estado",
+        "postalCode": "12345-678",
         "addressCountry": "Brasil"
-      }
+      },
+      "telephone": "+55 11 1234-5678",
+      "url": "https://example.com"
     }
     </script>
     <style>
@@ -35,7 +36,9 @@
             margin: 40px auto;
             padding: 20px;
             background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .header {
             background-color: #333;
@@ -45,29 +48,19 @@
         }
         .header h1 {
             margin: 0;
-            padding: 10px;
+            font-size: 24px;
         }
-        .sintomas {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .sintoma {
-            margin: 20px;
+        .content {
             padding: 20px;
-            background-color: #f7f7f7;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .sintoma h2 {
-            margin: 0;
-            padding: 10px;
+        .content h2 {
+            margin-top: 0;
+            font-size: 18px;
         }
-        .sintoma p {
-            padding: 10px;
+        .content p {
+            margin-bottom: 20px;
         }
-        .cta {
+        .btn {
             background-color: #4CAF50;
             color: #fff;
             padding: 10px 20px;
@@ -75,61 +68,73 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .cta:hover {
+        .btn:hover {
             background-color: #3e8e41;
         }
-        .endereco {
-            margin: 20px;
-            padding: 20px;
-            background-color: #f7f7f7;
+        .map {
+            width: 100%;
+            height: 200px;
             border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .endereco p {
-            padding: 10px;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Psicologia de Confiança</h1>
+            <h1>Psicologia - Encontre Paz e Equilíbrio</h1>
         </div>
-        <div class="sintomas">
-            <div class="sintoma">
-                <h2>Ansiedade</h2>
-                <p>Encontre paz e controle sobre seus pensamentos e emoções com nosso apoio especializado em ansiedade, e redescubra a tranquilidade em sua vida.</p>
-                <button class="cta" onclick="window.open('https://wa.me/551112345678', '_blank')">Fale conosco</button>
+        <div class="content">
+            <h2>Ansiedade, Burnout e Depressão: Encontre Ajuda Aqui</h2>
+            <p>Encontre paz e controle sobre seus pensamentos e emoções com estratégias eficazes para superar a ansiedade, burnout e depressão.</p>
+            <p>Reconstrua sua força e motivação, aprendendo a gerenciar o estresse e a prevenir o burnout para uma vida profissional e pessoal mais saudável e equilibrada.</p>
+            <p>Descubra um novo caminho para a felicidade e a esperança, superando a depressão com apoio especializado e estratégias comprovadas para uma vida mais plena e satisfatória.</p>
+            <button class="btn" id="whatsapp-btn">Fale conosco pelo WhatsApp</button>
+            <button class="btn" id="teleconsulta-btn">Agende uma teleconsulta</button>
+            <div id="endereco" style="display: none;">
+                <h2>Endereço Físico</h2>
+                <p>Rua Exemplo, 123, Cidade, Estado, 12345-678</p>
+                <div class="map" id="map"></div>
             </div>
-            <div class="sintoma">
-                <h2>Depressão</h2>
-                <p>Não permita que a depressão defina seu futuro - descubra como nosso suporte psicológico pode ajudá-lo a encontrar a luz no fim do túnel e a reconstruir sua esperança.</p>
-                <button class="cta" onclick="window.open('https://wa.me/551112345678', '_blank')">Fale conosco</button>
-            </div>
-            <div class="sintoma">
-                <h2>Burnout</h2>
-                <p>Recupere seu equilíbrio e energia com nossas estratégias personalizadas para superar o burnout, e redescubra a motivação e o prazer em suas atividades diárias.</p>
-                <button class="cta" onclick="window.open('https://wa.me/551112345678', '_blank')">Fale conosco</button>
-            </div>
-        </div>
-        <div id="endereco" class="endereco" style="display: none;">
-            <p>Nossa clínica está localizada em Rua Exemplo, 123, São Paulo - SP. CEP: 01234-567.</p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.886583335845!2d-46.635309684999996!3d-23.533089684999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a155ce31447%3A0x3e4bf1f2e7f1c609!2sRua+Exemplo%2C+123+-+S%C3%A3o+Paulo+-+SP!5e0!3m2!1spt-BR!2sbr!4v1559054457659!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </div>
     <script>
         // O Camaleão Geográfico
-        function detectarLocalizacao() {
-            // Simula a detecção de localização do usuário por IP
-            var usuarioLocal = true; // ou false
-            if (usuarioLocal) {
-                document.getElementById("endereco").style.display = "block";
-            } else {
-                document.getElementById("endereco").style.display = "none";
-            }
+        const userIp = '200.123.45.67'; // exemplo de IP
+        const distancia = 100; // distancia em km
+        const lat = -23.555;
+        const lon = -46.633;
+        const endereco = document.getElementById('endereco');
+        const map = document.getElementById('map');
+        
+        if (distancia < 100) {
+            endereco.style.display = 'block';
+            // carregar mapa
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap`;
+            document.body.appendChild(script);
+            window.initMap = function() {
+                const mapOptions = {
+                    center: { lat, lng: lon },
+                    zoom: 15
+                };
+                const googleMap = new google.maps.Map(map, mapOptions);
+                const marker = new google.maps.Marker({
+                    position: { lat, lng: lon },
+                    map: googleMap
+                });
+            };
+        } else {
+            endereco.style.display = 'none';
         }
-        detectarLocalizacao();
+        
+        document.getElementById('whatsapp-btn').addEventListener('click', function() {
+            window.open('https://api.whatsapp.com/send?phone=+5511999999999&text=Olá! Estou interessado em agendar uma consulta.', '_blank');
+        });
+        
+        document.getElementById('teleconsulta-btn').addEventListener('click', function() {
+            window.open('https://example.com/teleconsulta', '_blank');
+        });
     </script>
 </body>
 </html>
