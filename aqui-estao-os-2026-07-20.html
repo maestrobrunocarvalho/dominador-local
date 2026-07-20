@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Psicologia - Encontre Paz e Controle</title>
-    <meta name="description" content="Superando a ansiedade, depressão e burnout. Encontre esperança e recupere a alegria de viver com nossa ajuda.">
-    <meta name="keywords" content="psicologia, ansiedade, depressão, burnout, teleconsulta, psicólogo">
+    <title>Encontre Paz e Bem-Estar com Nossa Ajuda</title>
+    <meta name="description" content="Superar ansiedade, depressão e burnout com técnicas eficazes e apoio especializado. Encontre paz e controle sobre seus pensamentos e emoções.">
+    <meta name="keywords" content="ansiedade, depressão, burnout, psicologia, saúde mental, autoajuda, apoio">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Psychologist",
-      "name": "Psicologia - Encontre Paz e Controle",
-      "description": "Superando a ansiedade, depressão e burnout. Encontre esperança e recupere a alegria de viver com nossa ajuda.",
+      "name": "Seu Nome",
+      "description": "Psicólogo especializado em ansiedade, depressão e burnout.",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Rua Exemplo, 123",
-        "addressLocality": "São Paulo",
-        "addressRegion": "SP",
-        "postalCode": "01310-000",
+        "streetAddress": "Endereço Físico",
+        "addressLocality": "Cidade",
+        "addressRegion": "Estado",
+        "postalCode": "CEP",
         "addressCountry": "Brasil"
       },
       "telephone": "+55 11 1234-5678",
-      "url": "https://example.com"
+      "url": "https://seusite.com"
     }
     </script>
     <style>
@@ -37,11 +37,10 @@
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .header {
-            background-color: #4CAF50;
+            background-color: #333;
             color: #fff;
             padding: 10px;
             text-align: center;
@@ -64,89 +63,82 @@
         .symptom {
             margin: 20px;
             padding: 20px;
-            background-color: #f7f7f7;
             border: 1px solid #ddd;
             border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
             width: calc(33.33% - 20px);
         }
         .symptom h3 {
             margin-top: 0;
         }
-        .call-to-action {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .call-to-action a {
+        .cta {
             background-color: #4CAF50;
             color: #fff;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            text-decoration: none;
         }
-        .call-to-action a:hover {
+        .cta:hover {
             background-color: #3e8e41;
         }
-        .address {
-            margin-top: 20px;
-            padding: 20px;
-            background-color: #f7f7f7;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-        }
-        .map {
-            width: 100%;
-            height: 200px;
-            border: 1px solid #ddd;
-            margin-top: 20px;
+        #address {
+            display: none;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Psicologia - Encontre Paz e Controle</h1>
+            <h1>Encontre Paz e Bem-Estar com Nossa Ajuda</h1>
         </div>
         <div class="content">
-            <h2>Superando a ansiedade, depressão e burnout</h2>
-            <p>Encontre esperança e recupere a alegria de viver com nossa ajuda.</p>
+            <h2>Superar ansiedade, depressão e burnout com técnicas eficazes e apoio especializado.</h2>
+            <p>Encontre paz e controle sobre seus pensamentos e emoções com nossas técnicas eficazes e apoio especializado.</p>
             <div class="symptoms">
                 <div class="symptom">
                     <h3>Ansiedade</h3>
-                    <p>Encontre paz e controle em meio à tempestade, superando a ansiedade e descobrindo um novo você.</p>
+                    <p>Encontre paz e controle sobre seus pensamentos e emoções com técnicas eficazes para superar a ansiedade e viver uma vida mais serena.</p>
                 </div>
                 <div class="symptom">
                     <h3>Depressão</h3>
-                    <p>Sinta o peso ser levantado, encontre esperança e recupere a alegria de viver, superando a depressão.</p>
+                    <p>Não permita que a depressão defina sua vida - descubra estratégias de autoajuda e apoio para recuperar sua alegria e bem-estar.</p>
                 </div>
                 <div class="symptom">
                     <h3>Burnout</h3>
-                    <p>Reconstrua suas forças, encontre o equilíbrio e recupere a motivação, deixando o esgotamento para trás e vivendo uma vida plena.</p>
+                    <p>Recupere sua energia e motivação - aprenda a identificar e gerenciar o estresse crônico e a prevenir o burnout para uma vida mais equilibrada e produtiva.</p>
                 </div>
             </div>
-            <div class="call-to-action">
-                <a href="https://wa.me/551112345678" target="_blank">Agende uma teleconsulta</a>
-            </div>
-            <div class="address" id="address">
-                <p>Nossa clínica está localizada em:</p>
-                <p>Rua Exemplo, 123, São Paulo - SP</p>
-                <div class="map" id="map"></div>
+            <button class="cta" onclick="window.open('https://wa.me/551112345678', '_blank')">Fale conosco pelo WhatsApp</button>
+            <button class="cta" onclick="window.open('https://seusite.com/teleconsulta', '_blank')">Agende uma teleconsulta</button>
+            <div id="address">
+                <h2>Endereço Físico</h2>
+                <p>Endereço Físico, Cidade, Estado, CEP</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.886118914855!2d-46.635831684999996!3d-23.536964684499998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2c22ca5b%3A0x4c86680b6ae3e70!2sEndereço%20Físico!5e0!3m2!1spt-BR!2sbr!4v1643723400147!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
     <script>
         // O Camaleão Geográfico
-        function detectLocation() {
-            // Simula a detecção de localização do usuário por IP
-            var userLocation = "São Paulo";
-            if (userLocation === "São Paulo") {
-                document.getElementById("address").style.display = "block";
-            } else {
-                document.getElementById("address").style.display = "none";
-            }
+        function getIP() {
+            return new Promise((resolve, reject) => {
+                fetch('https://api.ipify.org?format=json')
+                    .then(response => response.json())
+                    .then(data => resolve(data.ip))
+                    .catch(error => reject(error));
+            });
         }
-        detectLocation();
+        async function getLocation() {
+            const ip = await getIP();
+            const response = await fetch(`https://ip-api.com/json/${ip}`);
+            const data = await response.json();
+            return data;
+        }
+        getLocation().then(data => {
+            if (data.regionName === 'São Paulo') {
+                document.getElementById('address').style.display = 'block';
+            }
+        });
     </script>
 </body>
 </html>
