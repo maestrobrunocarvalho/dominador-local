@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicologia - Encontre Paz e Controle</title>
+    <meta name="description" content="Encontre paz e controle em meio à turbulência, aprendendo a gerenciar a ansiedade, superar a depressão e prevenir o burnout. Consulte um psicólogo online ou presencialmente.">
+    <meta name="keywords" content="psicologia, ansiedade, depressão, burnout, teleconsulta, psicólogo online">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Psicologia - Encontre Paz e Controle",
+      "description": "Encontre paz e controle em meio à turbulência, aprendendo a gerenciar a ansiedade, superar a depressão e prevenir o burnout. Consulte um psicólogo online ou presencialmente.",
+      "image": "https://example.com/logo.png",
+      "telephone": "+55 11 1234-5678",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Exemplo, 123",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "12345-678",
+        "addressCountry": "Brasil"
+      }
+    }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            font-size: 18px;
+            margin-top: 0;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        .localizacao {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Psicologia - Encontre Paz e Controle</h1>
+        </div>
+        <div class="content">
+            <h2>Ansiedade, Depressão e Burnout</h2>
+            <p>Encontre paz e controle em meio à turbulência, aprendendo a gerenciar a ansiedade, superar a depressão e prevenir o burnout. Consulte um psicólogo online ou presencialmente.</p>
+            <p>Nossa equipe de psicólogos está aqui para ajudá-lo a encontrar a paz e o controle que você merece. Com anos de experiência e conhecimento, podemos ajudá-lo a superar os desafios e a alcançar seus objetivos.</p>
+            <button class="btn" id="whatsapp-btn">Fale conosco pelo WhatsApp</button>
+            <button class="btn" id="teleconsulta-btn">Agende uma teleconsulta</button>
+            <div class="localizacao" id="localizacao">
+                <h2>Localização</h2>
+                <p>Nossa clínica está localizada em São Paulo, SP. Venha nos visitar e converse com um de nossos psicólogos.</p>
+                <p>Endereço: Rua Exemplo, 123, São Paulo, SP</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.663111111111!2d-46.63555555555556!3d-23.555555555555556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a147f6f31d7%3A0x6c36f64f4e5a2c2a!2sRua+Exemplo%2C+123+-+S%C3%A3o+Paulo%2C+SP!5e0!3m2!1spt-BR!2sbr!4v1559774447517!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        // O Camaleão Geográfico
+        function detectarLocalizacao() {
+            // Simula a detecção de localização do usuário por IP
+            var usuarioLocal = true; // ou false
+            if (usuarioLocal) {
+                document.getElementById("localizacao").style.display = "block";
+            } else {
+                document.getElementById("localizacao").style.display = "none";
+            }
+        }
+        detectarLocalizacao();
+        // Adicionar evento de clique nos botões
+        document.getElementById("whatsapp-btn").addEventListener("click", function() {
+            window.open("https://wa.me/551112345678", "_blank");
+        });
+        document.getElementById("teleconsulta-btn").addEventListener("click", function() {
+            window.open("https://example.com/teleconsulta", "_blank");
+        });
+    </script>
+</body>
+</html>
