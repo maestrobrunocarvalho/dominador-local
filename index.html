@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Mental: Ansiedade, Depressão e Burnout</title>
-    <meta name="description" content="Encontre paz e controle sobre seus pensamentos e emoções com estratégias eficazes para superar a ansiedade, depressão e burnout.">
-    <meta name="keywords" content="ansiedade, depressão, burnout, saúde mental, psicologia">
+    <title>Psicologia - Encontre Paz e Controle</title>
+    <meta name="description" content="Encontre paz e controle sobre seus pensamentos e emoções com técnicas eficazes de gerenciamento de ansiedade, depressão e burnout.">
+    <meta name="keywords" content="psicologia, ansiedade, depressão, burnout, terapia online, teleconsulta">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Psychologist",
-      "name": "Psicologia",
-      "description": "Serviços de psicologia para ansiedade, depressão e burnout",
-      "telephone": "+55 11 1234-5678",
+      "name": "Psicologia - Encontre Paz e Controle",
+      "description": "Encontre paz e controle sobre seus pensamentos e emoções com técnicas eficazes de gerenciamento de ansiedade, depressão e burnout.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Rua Exemplo, 123",
@@ -20,7 +19,9 @@
         "addressRegion": "SP",
         "postalCode": "01234-567",
         "addressCountry": "Brasil"
-      }
+      },
+      "telephone": "+55 11 1234-5678",
+      "url": "https://example.com"
     }
     </script>
     <style>
@@ -36,7 +37,7 @@
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .header {
             background-color: #333;
@@ -53,10 +54,23 @@
         .content h2 {
             margin-top: 0;
         }
-        .content p {
-            margin-bottom: 20px;
+        .symptoms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .btn {
+        .symptom {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: calc(33.33% - 20px);
+        }
+        .symptom h3 {
+            margin-top: 0;
+        }
+        .button {
             background-color: #4CAF50;
             color: #fff;
             padding: 10px 20px;
@@ -64,55 +78,77 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .btn:hover {
+        .button:hover {
             background-color: #3e8e41;
         }
-        @media only screen and (max-width: 768px) {
-            .container {
-                margin: 20px auto;
-            }
+        .address {
+            padding: 20px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+        }
+        .map {
+            width: 100%;
+            height: 200px;
+            border: 1px solid #ddd;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Saúde Mental: Ansiedade, Depressão e Burnout</h1>
+            <h1>Psicologia - Encontre Paz e Controle</h1>
         </div>
         <div class="content">
             <h2>Encontre paz e controle sobre seus pensamentos e emoções</h2>
-            <p>Se você está procurando ajuda para superar a ansiedade, depressão ou burnout, você veio ao lugar certo. Nossa equipe de psicólogos especializados está aqui para ajudá-lo a encontrar paz e controle sobre seus pensamentos e emoções.</p>
-            <h2>Sintomas e soluções</h2>
-            <p>Ansiedade: Encontre estratégias eficazes para superar a ansiedade e viver uma vida mais tranquila.</p>
-            <p>Depressão: Descubra como romper o ciclo da depressão e recuperar sua alegria de viver com apoio especializado e métodos comprovados.</p>
-            <p>Burnout: Reconquiste sua energia e motivação aprendendo a gerenciar o estresse e prevenir o esgotamento profissional com dicas e estratégias personalizadas.</p>
-            <button class="btn" id="whatsapp-btn">Fale conosco pelo WhatsApp</button>
-            <button class="btn" id="teleconsulta-btn">Agende uma teleconsulta</button>
-            <div id="endereco" style="display: none;">
-                <h2>Endereço físico</h2>
-                <p>Rua Exemplo, 123, São Paulo, SP, 01234-567</p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.8859199999996!2d-46.635309!3d-23.536449999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a147f7c3d%3A0xd34a8c5b64e2a8!2sRua+Exemplo%2C+123+-+S%C3%A3o+Paulo%2C+SP!5e0!3m2!1spt-BR!2sbr!4v1557944551111!5m2!1spt-BR!2sbr" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <p>Descubra estratégias e apoio para superar a ansiedade, depressão e burnout.</p>
+            <div class="symptoms">
+                <div class="symptom">
+                    <h3>Ansiedade</h3>
+                    <p>Encontre paz e controle sobre seus pensamentos e emoções com técnicas eficazes de gerenciamento de ansiedade.</p>
+                    <button class="button" onclick="whatsapp()">Fale conosco</button>
+                </div>
+                <div class="symptom">
+                    <h3>Depressão</h3>
+                    <p>Superar a depressão é possível - descubra estratégias e apoio para retomar o controle sobre sua vida e encontrar a felicidade novamente.</p>
+                    <button class="button" onclick="whatsapp()">Fale conosco</button>
+                </div>
+                <div class="symptom">
+                    <h3>Burnout</h3>
+                    <p>Recupere seu equilíbrio e vitalidade - aprenda a prevenir e superar o burnout com dicas práticas e apoio especializado.</p>
+                    <button class="button" onclick="whatsapp()">Fale conosco</button>
+                </div>
+            </div>
+            <div class="address" id="address">
+                <p>Nossa clínica está localizada em:</p>
+                <p>Rua Exemplo, 123 - São Paulo - SP</p>
+                <div class="map" id="map"></div>
             </div>
         </div>
     </div>
     <script>
-        // O Camaleão Geográfico
-        function detectarLocalizacao() {
-            // Simula a detecção de localização do usuário por IP
-            var localizacao = Math.random() < 0.5 ? "local" : "distante";
-            if (localizacao === "local") {
-                document.getElementById("endereco").style.display = "block";
-            } else {
-                document.getElementById("endereco").style.display = "none";
-            }
+        function whatsapp() {
+            window.open('https://api.whatsapp.com/send?phone=551112345678', '_blank');
         }
-        detectarLocalizacao();
-        document.getElementById("whatsapp-btn").addEventListener("click", function() {
-            window.open("https://wa.me/551112345678", "_blank");
-        });
-        document.getElementById("teleconsulta-btn").addEventListener("click", function() {
-            window.open("https://example.com/teleconsulta", "_blank");
-        });
+        // O Camaleão Geográfico
+        function getIP() {
+            fetch('https://api.ipify.org?format=json')
+                .then(response => response.json())
+                .then(data => {
+                    const ip = data.ip;
+                    fetch(`https://ipapi.co/${ip}/json/`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const city = data.city;
+                            const region = data.region;
+                            if (city === 'São Paulo' && region === 'SP') {
+                                document.getElementById('address').style.display = 'block';
+                            } else {
+                                document.getElementById('address').style.display = 'none';
+                            }
+                        });
+                });
+        }
+        getIP();
     </script>
 </body>
 </html>
