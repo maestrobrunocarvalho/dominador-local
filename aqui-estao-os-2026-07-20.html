@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde Mental: Encontre Ajuda e Apoio</title>
-    <meta name="description" content="Encontre ajuda e apoio para ansiedade, burnout e depressão. Nossa equipe de psicólogos oferece estratégias eficazes para superar esses sintomas e viver uma vida mais serena.">
-    <meta name="keywords" content="ansiedade, burnout, depressão, saúde mental, psicologia, teleconsulta, whatsapp">
+    <title>Psicologia - Supere a Ansiedade, Depressão e Burnout</title>
+    <meta name="description" content="Encontre apoio especializado para superar a ansiedade, depressão e burnout. Estratégias eficazes e técnicas comprovadas para uma vida mais tranquila e plena.">
+    <meta name="keywords" content="psicologia, ansiedade, depressão, burnout, saúde mental, teleconsulta, apoio especializado">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Psychologist",
-      "name": "Saúde Mental",
-      "description": "Encontre ajuda e apoio para ansiedade, burnout e depressão.",
+      "name": "Psicologia",
+      "description": "Apoio especializado para superar a ansiedade, depressão e burnout",
       "telephone": "+55 11 1234-5678",
       "address": {
         "@type": "PostalAddress",
@@ -36,12 +36,12 @@
             padding: 20px;
             background-color: #fff;
             border: 1px solid #ddd;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .header {
-            background-color: #4CAF50;
+            background-color: #333;
             color: #fff;
-            padding: 20px;
+            padding: 10px;
             text-align: center;
         }
         .header h1 {
@@ -62,15 +62,18 @@
         .symptom {
             margin: 20px;
             padding: 20px;
-            background-color: #f7f7f7;
             border: 1px solid #ddd;
+            border-radius: 10px;
             width: calc(33.33% - 20px);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         .symptom h3 {
             margin-top: 0;
         }
-        .call-to-action {
+        .symptom p {
+            margin-bottom: 20px;
+        }
+        .cta {
             background-color: #4CAF50;
             color: #fff;
             padding: 10px 20px;
@@ -78,44 +81,46 @@
             border-radius: 5px;
             cursor: pointer;
         }
-        .call-to-action:hover {
+        .cta:hover {
             background-color: #3e8e41;
         }
         .address {
             padding: 20px;
             border: 1px solid #ddd;
-            background-color: #f7f7f7;
+            border-radius: 10px;
+            margin-bottom: 20px;
         }
         .map {
             width: 100%;
             height: 200px;
             border: 1px solid #ddd;
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Saúde Mental: Encontre Ajuda e Apoio</h1>
+            <h1>Psicologia - Supere a Ansiedade, Depressão e Burnout</h1>
         </div>
         <div class="content">
-            <h2>Superar a ansiedade, burnout e depressão é possível</h2>
-            <p>Encontre ajuda e apoio para esses sintomas com nossa equipe de psicólogos. Nossa abordagem é personalizada e focada em estratégias eficazes para superar esses sintomas e viver uma vida mais serena.</p>
+            <h2>Encontre apoio especializado para superar a ansiedade, depressão e burnout</h2>
+            <p>Estratégias eficazes e técnicas comprovadas para uma vida mais tranquila e plena.</p>
             <div class="symptoms">
                 <div class="symptom">
                     <h3>Ansiedade</h3>
-                    <p>Encontre tranquilidade e controle sobre seus pensamentos e emoções com estratégias eficazes para superar a ansiedade e viver uma vida mais serena.</p>
-                    <button class="call-to-action" onclick="window.location.href='https://wa.me/551112345678';">Fale conosco pelo WhatsApp</button>
-                </div>
-                <div class="symptom">
-                    <h3>Burnout</h3>
-                    <p>Reconstrua sua energia e motivação, aprendendo a gerenciar o estresse e a prevenir o burnout para uma vida profissional e pessoal mais equilibrada.</p>
-                    <button class="call-to-action" onclick="window.location.href='https://wa.me/551112345678';">Fale conosco pelo WhatsApp</button>
+                    <p>Supere o medo e a insegurança com estratégias eficazes para controlar a ansiedade e viver uma vida mais tranquila e plena.</p>
+                    <button class="cta" onclick="window.open('https://wa.me/551112345678', '_blank')">Fale com um especialista</button>
                 </div>
                 <div class="symptom">
                     <h3>Depressão</h3>
-                    <p>Descubra um caminho para a recuperação e a felicidade, compreendendo e lidando com a depressão de forma eficaz, com apoio e orientação especializada.</p>
-                    <button class="call-to-action" onclick="window.location.href='https://wa.me/551112345678';">Fale conosco pelo WhatsApp</button>
+                    <p>Encontre a luz no fim do túnel e recupere seu bem-estar emocional com apoio especializado e técnicas comprovadas para superar a depressão.</p>
+                    <button class="cta" onclick="window.open('https://wa.me/551112345678', '_blank')">Fale com um especialista</button>
+                </div>
+                <div class="symptom">
+                    <h3>Burnout</h3>
+                    <p>Reconquiste sua energia e motivação com dicas práticas e apoio profissional para superar o esgotamento físico e mental do burnout e retomar o controle de sua vida.</p>
+                    <button class="cta" onclick="window.open('https://wa.me/551112345678', '_blank')">Fale com um especialista</button>
                 </div>
             </div>
             <div class="address" id="address">
@@ -127,16 +132,14 @@
     </div>
     <script>
         // O Camaleão Geográfico
-        function detectLocation() {
+        function getUserLocation() {
             // Simula a detecção de localização do usuário por IP
-            // Se o usuário for local, exibe a seção com o endereço físico
-            // Se for distante, oculta o endereço físico e foca exclusivamente na teleconsulta online
-            var userLocation = "local"; // Troque para "distante" para testar
-            if (userLocation === "distante") {
-                document.getElementById("address").style.display = "none";
-            }
+            // Retorna true se o usuário for local, false caso contrário
+            return Math.random() < 0.5;
         }
-        detectLocation();
+        if (!getUserLocation()) {
+            document.getElementById("address").style.display = "none";
+        }
     </script>
 </body>
 </html>
