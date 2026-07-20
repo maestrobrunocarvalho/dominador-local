@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansiedade Generalizada em Taubaté - Encontre Ajuda</title>
+    <meta name="description" content="Encontre ajuda para Ansiedade Generalizada em Taubaté. Nossa equipe de psicólogos está aqui para te apoiar. Teleconsulta e atendimento presencial disponíveis.">
+    <meta name="keywords" content="Ansiedade Generalizada, Taubaté, Psicologia, Teleconsulta, Atendimento Presencial">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://example.com/ansiedade-generalizada-taubate">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Psicologia Taubaté",
+      "description": "Atendimento psicológico para Ansiedade Generalizada em Taubaté",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Jorge Secco 41",
+        "addressLocality": "Taubaté",
+        "addressRegion": "SP",
+        "postalCode": "12020-000",
+        "addressCountry": "Brasil"
+      },
+      "telephone": "+55 12 1234-5678",
+      "url": "https://example.com/ansiedade-generalizada-taubate",
+      "sameAs": [
+        "https://www.facebook.com/psicologiatubate",
+        "https://www.instagram.com/psicologiatubate"
+      ]
+    }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        #endereco {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ansiedade Generalizada em Taubaté - Encontre Ajuda</h1>
+        </div>
+        <div class="content">
+            <p>Se você está procurando ajuda para Ansiedade Generalizada em Taubaté, você está no lugar certo. Nossa equipe de psicólogos está aqui para te apoiar e te ajudar a superar esse desafio.</p>
+            <p>Nossa abordagem é personalizada e ética, e nos esforçamos para criar um ambiente seguro e acolhedor para que você se sinta confortável em compartilhar seus sentimentos e preocupações.</p>
+            <p>Oferecemos atendimento presencial e teleconsulta, para que você possa escolher a opção que melhor se adapta às suas necessidades.</p>
+            <button class="btn" onclick="window.location.href='https://wa.me/551212345678';">Agende uma sessão de teleconsulta</button>
+            <div id="endereco">
+                <p>Nossa clínica está localizada em:</p>
+                <p>Rua Jorge Secco 41 - Taubaté/SP</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.885919292741!2d-45.563611999999996!3d-23.026111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c3c6c6c6c6c6%3A0x5a5a5a5a5a5a5a5a!2sRua%20Jorge%20Secco%2041%2C%20Taubat%C3%A9%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1643723411349!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+            var R = 6371; // Radius of the earth in km
+            var dLat = deg2rad(lat2 - lat1);
+            var dLon = deg2rad(lon2 - lon1);
+            var a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            var d = R * c; // Distance in km
+            return d;
+        }
+        function deg2rad(deg) {
+            return deg * (Math.PI / 180);
+        }
+        function detectLocation() {
+            var lat = -23.026111;
+            var lon = -45.563611;
+            var distance = getDistanceFromLatLonInKm(lat, lon, -23.026111, -45.563611);
+            if (distance < 100) {
+                document.getElementById("endereco").style.display = "block";
+            } else {
+                document.getElementById("endereco").style.display = "none";
+            }
+        }
+        detectLocation();
+    </script>
+</body>
+</html>
