@@ -1,1 +1,120 @@
-<html><body><h1>Erro ao gerar página</h1><p>Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kxm0fyatfnpvrg8b489xs2gj` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 96107, Requested 4581. Please try again in 9m54.432s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}</p></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psicologia - Encontre Paz e Supere os Desafios</title>
+    <meta name="description" content="Encontre paz e controle sobre seus pensamentos e emoções com técnicas comprovadas para superar a ansiedade, burnout e depressão.">
+    <meta name="keywords" content="psicologia, ansiedade, burnout, depressão, terapia online, teleconsulta">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Psicologia",
+      "description": "Encontre paz e controle sobre seus pensamentos e emoções com técnicas comprovadas para superar a ansiedade, burnout e depressão.",
+      "image": "https://example.com/psicologia.jpg",
+      "telephone": "+55 11 1234-5678",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Example, 123",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01234-567",
+        "addressCountry": "Brasil"
+      }
+    }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        .localizacao {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Psicologia - Encontre Paz e Supere os Desafios</h1>
+        </div>
+        <div class="content">
+            <h2>Ansiedade</h2>
+            <p>Encontre paz e controle sobre seus pensamentos e emoções com técnicas comprovadas para superar a ansiedade e viver uma vida mais serena.</p>
+            <h2>Burnout</h2>
+            <p>Recupere sua energia e motivação com estratégias personalizadas para prevenir e tratar o burnout, melhorando sua qualidade de vida e produtividade.</p>
+            <h2>Depressão</h2>
+            <p>Descubra um novo caminho para a felicidade e a esperança com apoio especializado e terapias inovadoras para superar a depressão e reconstruir sua vida.</p>
+            <button class="btn" id="whatsapp">Fale conosco pelo WhatsApp</button>
+            <button class="btn" id="teleconsulta">Agende uma teleconsulta</button>
+            <div class="localizacao" id="localizacao">
+                <h2>Nossa Localização</h2>
+                <p>Rua Example, 123, São Paulo - SP</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.886724615597!2d-46.63530928499167!3d-23.536417984671145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2c1ec6d3%3A0x40c6a5776e62e70!2sRua+Example%2C+123+-+S%C3%A3o+Paulo+-+SP!5e0!3m2!1spt-BR!2sbr!4v1550657797507!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        // O Camaleão Geográfico
+        function detectarLocalizacao() {
+            // Simula a detecção de localização do usuário por IP
+            var usuarioLocal = true; // true se o usuário for local, false se for distante
+            if (usuarioLocal) {
+                document.getElementById("localizacao").style.display = "block";
+            } else {
+                document.getElementById("localizacao").style.display = "none";
+            }
+        }
+        detectarLocalizacao();
+        // Adicionar evento de click nos botões
+        document.getElementById("whatsapp").addEventListener("click", function() {
+            window.open("https://api.whatsapp.com/send?phone=551112345678", "_blank");
+        });
+        document.getElementById("teleconsulta").addEventListener("click", function() {
+            window.open("https://example.com/teleconsulta", "_blank");
+        });
+    </script>
+</body>
+</html>
