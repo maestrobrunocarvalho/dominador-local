@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansiedade por Exame em Taubaté - Psicologia</title>
+    <meta name="description" content="Enfrente a ansiedade por exame em Taubaté com apoio psicológico especializado. Consulte um psicólogo online ou presencialmente.">
+    <meta name="keywords" content="ansiedade por exame, psicologia, Taubaté, psicólogo online, teleconsulta">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <link rel="canonical" href="https://psicologia-ansiedade-taubate.com/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Psicologia - Ansiedade por Exame",
+      "description": "Apoio psicológico para ansiedade por exame em Taubaté",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Jorge Secco 41",
+        "addressLocality": "Taubaté",
+        "addressRegion": "SP",
+        "postalCode": "12010-030",
+        "addressCountry": "Brasil"
+      },
+      "telephone": "+55 12 98258-2454",
+      "url": "https://psicologia-ansiedade-taubate.com/"
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ansiedade por Exame em Taubaté - Psicologia</h1>
+        </div>
+        <div class="content">
+            <p>Se você está sentindo ansiedade por exame em Taubaté, saiba que não está sozinho. A ansiedade é um sentimento comum que pode afetar qualquer pessoa, independentemente da idade ou nível de estudo.</p>
+            <p>Nossa equipe de psicólogos está aqui para ajudá-lo a superar essa ansiedade e alcançar seus objetivos. Com anos de experiência em psicologia, podemos oferecer um apoio personalizado e eficaz para você.</p>
+            <p>Entre em contato conosco para agendar uma consulta e começar a trabalhar em sua ansiedade por exame.</p>
+            <button class="btn" onclick="window.location.href='https://wa.me/5512982582454';">Fale conosco pelo WhatsApp</button>
+            <button class="btn" onclick="window.location.href='https://psicologobrunocarvalho.weebly.com/';">Agende uma teleconsulta</button>
+            <div id="endereco" style="display: none;">
+                <h2>Endereço Físico</h2>
+                <p>Rua Jorge Secco 41 - Taubaté/SP</p>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.341945115661!2d-45.560111684999996!3d-23.027509984999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8b2f9c7c7c7c7%3A0x5c5c5c5c5c5c5c5c!2sRua%20Jorge%20Secco%2041%2C%20Taubat%C3%A9%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1643723411147!5m2!1spt-BR!2sbr" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <script>
+        // O Camaleão Geográfico
+        function detectLocation() {
+            // Simula a detecção de localização do usuário
+            // Aqui você pode usar uma API de geolocalização para detectar a localização do usuário
+            // Para fins de exemplo, vamos usar um valor fixo
+            var latitude = -23.027509984999998;
+            var longitude = -45.560111684999996;
+            var distancia = calcularDistancia(-23.027509984999998, -45.560111684999996, latitude, longitude);
+            if (distancia <= 50) { // 50 km
+                document.getElementById("endereco").style.display = "block";
+            } else {
+                document.getElementById("endereco").style.display = "none";
+            }
+        }
+        function calcularDistancia(lat1, lon1, lat2, lon2) {
+            var R = 6371; // km
+            var dLat = toRad(lat2 - lat1);
+            var dLon = toRad(lon2 - lon1);
+            var lat1 = toRad(lat1);
+            var lat2 = toRad(lat2);
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            var d = R * c;
+            return d;
+        }
+        function toRad(deg) {
+            return deg * Math.PI / 180;
+        }
+        detectLocation();
+    </script>
+</body>
+</html>
