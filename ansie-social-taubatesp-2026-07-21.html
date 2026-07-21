@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ansiedade Social em Taubaté/SP - Psicologia</title>
+    <meta name="description" content="Encontre ajuda para Ansiedade Social em Taubaté/SP. Psicologia especializada em ansiedade social. Fale conosco pelo WhatsApp ou agende uma teleconsulta.">
+    <meta name="keywords" content="Ansiedade Social, Psicologia, Taubaté, SP, Teleconsulta">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+    <link rel="canonical" href="https://psicologia-ansiedade-social-taubate-sp.com/">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Psicologia Ansiedade Social",
+      "description": "Psicologia especializada em ansiedade social em Taubaté/SP",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Jorge Secco 41",
+        "addressLocality": "Taubaté",
+        "addressRegion": "SP",
+        "postalCode": "12010-030",
+        "addressCountry": "Brasil"
+      },
+      "telephone": "+55 12 98258-2454",
+      "url": "https://psicologia-ansiedade-social-taubate-sp.com/"
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3e8e41;
+        }
+        .map {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .map iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ansiedade Social em Taubaté/SP</h1>
+        </div>
+        <div class="content">
+            <p>Se você está procurando ajuda para ansiedade social em Taubaté/SP, você está no lugar certo. Nossa equipe de psicólogos especializados está aqui para ajudá-lo a superar seus medos e ansiedades.</p>
+            <p>Nossa abordagem é baseada em técnicas comprovadas e personalizadas para atender às suas necessidades específicas. Nossa equipe é composta por profissionais experientes e comprometidos em ajudá-lo a alcançar seus objetivos.</p>
+            <button class="btn" onclick="window.location.href='https://wa.me/5512982582454'">Fale conosco pelo WhatsApp</button>
+            <button class="btn" onclick="window.location.href='https://psicologobrunocarvalho.weebly.com/'">Agende uma teleconsulta</button>
+            <div id="endereco" style="display:none;">
+                <p>Nossa clínica está localizada em:</p>
+                <p>Rua Jorge Secco 41 - Taubaté/SP</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.493118255615!2d-45.56211168500001!3d-23.025249984999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8f55c43f43f5b%3A0x4c5a5c5c5c5c5c5c!2sRua%20Jorge%20Secco%2C%2041%20-%20Taubat%C3%A9%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1643723401141!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // O Camaleão Geográfico
+        function getGeolocation() {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+                var taubateLat = -23.025249984999998;
+                var taubateLon = -45.56211168500001;
+                var distance = getDistance(lat, lon, taubateLat, taubateLon);
+                if (distance < 50) { // 50 km
+                    document.getElementById("endereco").style.display = "block";
+                }
+            }, function(error) {
+                console.error("Erro ao obter localização: " + error.message);
+            });
+        }
+        function getDistance(lat1, lon1, lat2, lon2) {
+            var R = 6371; // km
+            var dLat = (lat2 - lat1) * Math.PI / 180;
+            var dLon = (lon2 - lon1) * Math.PI / 180;
+            var lat1Rad = lat1 * Math.PI / 180;
+            var lat2Rad = lat2 * Math.PI / 180;
+            var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                    Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1Rad) * Math.cos(lat2Rad);
+            var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            var distance = R * c;
+            return distance;
+        }
+        getGeolocation();
+    </script>
+</body>
+</html>
