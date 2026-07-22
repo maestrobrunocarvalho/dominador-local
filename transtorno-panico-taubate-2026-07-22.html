@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transtorno de Pânico em Taubaté - Encontre Ajuda</title>
+    <meta name="description" content="Encontre ajuda para o transtorno de pânico em Taubaté. Nossa equipe de psicólogos está aqui para ajudá-lo a superar esse desafio.">
+    <meta name="keywords" content="transtorno de pânico, Taubaté, psicologia, ajuda, tratamento">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Psicólogo Bruno Carvalho",
+      "description": "Psicólogo em Taubaté, especializado em tratamento de transtorno de pânico.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Jorge Secco 41",
+        "addressLocality": "Taubaté",
+        "addressRegion": "SP",
+        "postalCode": "12020-000",
+        "addressCountry": "Brasil"
+      },
+      "telephone": "+55 12 98258-2454",
+      "url": "https://psicologobrunocarvalho.weebly.com/"
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #34C759;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .button {
+            background-color: #34C759;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #2ecc71;
+        }
+        @media (max-width: 768px) {
+            .button {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        .address {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Transtorno de Pânico em Taubaté - Encontre Ajuda</h1>
+        </div>
+        <div class="content">
+            <p>Se você está procurando ajuda para o transtorno de pânico em Taubaté, você está no lugar certo. Nossa equipe de psicólogos está aqui para ajudá-lo a superar esse desafio.</p>
+            <p>O transtorno de pânico é uma condição que pode causar sintomas como ataques de pânico, medo de perder o controle, entre outros. No entanto, com a ajuda certa, é possível superar esses sintomas e melhorar a qualidade de vida.</p>
+            <div class="buttons">
+                <a href="https://wa.me/5512982582454" class="button">Fale conosco pelo WhatsApp</a>
+                <a href="https://psicologobrunocarvalho.weebly.com/" class="button">Agende uma teleconsulta</a>
+            </div>
+            <div class="address" id="address">
+                <p>Nossa clínica está localizada em:</p>
+                <p>Rua Jorge Secco 41 - Taubaté/SP</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.city.toLowerCase() === 'taubate') {
+                document.getElementById('address').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
