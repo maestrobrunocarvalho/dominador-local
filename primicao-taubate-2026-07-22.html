@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deprimição em Taubaté - Encontre Ajuda Profissional</title>
+    <meta name="description" content="Encontre ajuda para superar a deprimição em Taubaté. Nossa equipe de psicólogos está aqui para apoiar você em sua jornada de recuperação.">
+    <meta name="keywords" content="deprimição, Taubaté, psicologia, ajuda profissional">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Psicólogo Bruno Carvalho",
+      "description": "Psicólogo em Taubaté especializado em tratamento de deprimição",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Jorge Secco 41",
+        "addressLocality": "Taubaté",
+        "addressRegion": "SP",
+        "postalCode": "12020-000",
+        "addressCountry": "Brasil"
+      },
+      "telephone": "+55 12 98258-2454",
+      "url": "https://psicologobrunocarvalho.weebly.com/"
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            color: #2ecc71;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #666666;
+            font-size: 18px;
+        }
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            background-color: #2ecc71;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 8px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #29b765;
+        }
+        #address {
+            display: none;
+            text-align: center;
+            margin-top: 25px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        #address iframe {
+            width: 100%;
+            height: 250px;
+            border: 0;
+            border-radius: 6px;
+            margin-top: 15px;
+        }
+        @media (max-width: 768px) {
+            .buttons {
+                flex-direction: column;
+            }
+            .button {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Deprimição em Taubaté: Encontre Ajuda Profissional</h1>
+            <p>Nossa equipe de psicólogos está aqui para apoiar você em sua jornada de recuperação.</p>
+        </div>
+        <div class="buttons">
+            <a href="https://wa.me/5512982582454" class="button">Fale conosco pelo WhatsApp</a>
+            <a href="https://psicologobrunocarvalho.weebly.com/" class="button">Agende uma teleconsulta</a>
+        </div>
+        <div id="address" style="display: none; text-align: center; margin: 30px auto; max-width: 800px; padding: 25px; background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+            <h2>Nosso endereço físico: Rua Jorge Secco 41 - Taubaté/SP</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.333555117493!2d-45.563111885000004!3d-23.024499984999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8f5f4b3b3b5b5%3A0xd4c4c4c4c4c4c4c4!2sRua%20Jorge%20Secco%2C%2041%20-%20Taubat%C3%A9%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1643723408141!5m2!1spt-BR!2sbr" width="100%" height="250px" style="border:0; border-radius:8px; margin-top:15px;"></iframe>
+        </div>
+    </div>
+    <script>
+        fetch('https://ipwho.is/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.city && data.city.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, "").includes('taubate')) {
+                document.getElementById('address').style.display = 'block';
+            }
+        })
+        .catch(error => console.error('Erro:', error));
+    </script>
+</body>
+</html>
