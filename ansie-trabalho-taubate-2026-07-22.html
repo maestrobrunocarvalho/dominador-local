@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Ansiedade no Trabalho em Taubaté: Encontre Ajuda e Supere o Estresse</title>
+    <meta name="robots" content="index, follow">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
+        .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .header h1 { color: #2ecc71; text-align: center; margin-bottom: 15px; }
+        .header p { text-align: center; color: #555; margin-bottom: 25px; font-size: 16px; }
+        .buttons { display: flex; justify-content: center; gap: 15px; margin-top: 25px; }
+        .button { background: #2ecc71; color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-flex; align-items: center; justify-content: center; text-align: center; }
+        @media (max-width: 768px) {
+            .buttons { flex-direction: column; }
+            .button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Superando a Ansiedade no Trabalho em Taubaté: Encontre Ajuda e Paz</h1>
+            <p>Você está cansado de viver com o peso da ansiedade no trabalho em Taubaté? Nossa equipe de psicólogos especialistas está aqui para ajudá-lo a recuperar o controle da sua vida e encontrar o bem-estar que você merece. Com experiência em tratar ansiedade no trabalho, podemos oferecer um suporte personalizado e eficaz para você superar seus desafios e alcançar a tranquilidade que busca.</p>
+        </div>
+        <div class="buttons">
+            <a class="button" href="https://wa.me/5512982582454">Fale conosco pelo WhatsApp</a>
+            <a class="button" href="https://psicologobrunocarvalho.weebly.com/">Agende uma teleconsulta</a>
+        </div>
+        <div id="address" style="display: none; text-align: center; margin-top: 25px; padding-top: 20px; border-top: 1px solid #eaeaea;">
+            <p style="font-weight: bold; color: #333;">Nosso endereço físico: Rua Jorge Secco 41 - Taubaté/SP</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.664115889905!2d-45.56311168500004!3d-23.025419984999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c48c4fc4c4c4c4%3A0x5a5a5a5a5a5a5a5a!2sRua%20Jorge%20Secco%2C%2041%20-%20Taubat%C3%A9%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1662012345678!5m2!1spt-BR!2sbr" width="100%" height="250px" style="border:0; border-radius:8px; margin-top:15px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <script>
+        // Camaleão Geográfico Blindado (URL + IP Flexível)
+        const urlParams = new URLSearchParams(window.location.search);
+        const forcarCidade = urlParams.get('cidade');
+
+        const mostrarEndereco = () => {
+            document.getElementById('address').style.setProperty('display', 'block', 'important');
+        };
+
+        if (forcarCidade && forcarCidade.toLowerCase().includes('taubate')) {
+            mostrarEndereco();
+        } else {
+            fetch('https://ipwho.is/')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.city) {
+                        const cidadeIP = data.city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+                        // Aceita Taubaté ou cidades vizinhas da região se necessário
+                        if (cidadeIP.includes('taubate') || cidadeIP.includes('tremembe')) {
+                            mostrarEndereco();
+                        }
+                    }
+                })
+                .catch(error => console.error('Erro ao verificar IP:', error));
+        }
+    </script>
+</body>
+</html>
