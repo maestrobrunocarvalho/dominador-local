@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taubaté: Depressão - Encontre Ajuda Profissional</title>
+    <meta name="description" content="Encontre ajuda profissional para depressão em Taubaté. Nossa equipe de psicólogos está aqui para ajudar.">
+    <meta name="keywords" content="depressão, taubaté, psicologia, psicólogo, ajuda profissional">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Psychologist",
+      "name": "Psicólogo Bruno Carvalho",
+      "description": "Psicólogo em Taubaté, especializado em depressão.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Jorge Secco 41",
+        "addressLocality": "Taubaté",
+        "addressRegion": "SP",
+        "postalCode": "12010-000",
+        "addressCountry": "Brasil"
+      },
+      "telephone": "+55 12 98258-2454",
+      "url": "https://psicologobrunocarvalho.weebly.com/"
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #34c759;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 10px 10px 0 0;
+        }
+        .content {
+            padding: 20px;
+        }
+        .buttons {
+            text-align: center;
+        }
+        .button {
+            background-color: #34c759;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+        }
+        .button:hover {
+            background-color: #2ecc71;
+        }
+        @media (max-width: 768px) {
+            .button {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+        #address {
+            display: none;
+            padding: 10px;
+            background-color: #f7f7f7;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Taubaté: Depressão - Encontre Ajuda Profissional</h1>
+        </div>
+        <div class="content">
+            <p>Se você está procurando ajuda para depressão em Taubaté, você veio ao lugar certo. Nossa equipe de psicólogos está aqui para ajudar.</p>
+            <p>A depressão é uma condição séria que pode afetar qualquer pessoa, independentemente da idade ou do sexo. Ela pode ser causada por uma variedade de fatores, incluindo estresse, ansiedade, trauma e problemas de saúde.</p>
+            <p>Nossa equipe de psicólogos está treinada para ajudar você a lidar com a depressão e a encontrar soluções para melhorar sua saúde mental.</p>
+        </div>
+        <div class="buttons">
+            <a href="https://wa.me/5512982582454" class="button">Fale conosco pelo WhatsApp</a>
+            <a href="https://psicologobrunocarvalho.weebly.com/" class="button">Agende uma teleconsulta</a>
+        </div>
+        <div id="address">
+            <p>Nosso endereço físico é: Rua Jorge Secco 41 - Taubaté/SP</p>
+        </div>
+    </div>
+    <script>
+        fetch('https://ipapi.co/json/')
+        .then(response => response.json())
+        .then(data => {
+            if (data.city && data.city.toLowerCase() === 'taubate') {
+                document.getElementById('address').style.display = 'block';
+            }
+        })
+        .catch(error => console.error('Erro ao obter localização:', error));
+    </script>
+</body>
+</html>
