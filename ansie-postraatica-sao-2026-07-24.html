@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Ansiedade Pós-Traumática em São Paulo: Encontre Ajuda e Supere o Trauma</title>
+    <title>Ansiedade Pós-Traumática em São Bernardo do Campo: Encontre Ajuda e Paz</title>
     <meta name="robots" content="index, follow">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
@@ -20,8 +20,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Superando a Ansiedade Pós-Traumática em São Paulo: Encontre Ajuda e Paz</h1>
-            <p>Você está cansado de viver com o peso da ansiedade pós-traumática em São Paulo? Nossa equipe de psicólogos especialistas está aqui para ajudá-lo a recuperar o controle da sua vida e encontrar o bem-estar que você merece. Com experiência e empatia, oferecemos um ambiente seguro para você enfrentar seus medos e superar o trauma.</p>
+            <h1>Superando a Ansiedade Pós-Traumática em São Bernardo do Campo: Encontre Ajuda e Paz</h1>
+            <p>Você está cansado de viver com o peso da ansiedade pós-traumática em São Bernardo do Campo? Nossa equipe de psicólogos especialistas está aqui para ajudá-lo a recuperar o controle da sua vida e encontrar o bem-estar que você merece.</p>
         </div>
         <div class="buttons">
             <a class="button" href="https://wa.me/5512982582454">Fale conosco pelo WhatsApp</a>
@@ -41,7 +41,7 @@
             document.getElementById('address').style.setProperty('display', 'block', 'important');
         };
 
-        if (forcarCidade && forcarCidade.toLowerCase().includes('taubate')) {
+        if (forcarCidade && forcarCidade.toLowerCase().includes('sao bernardo do campo')) {
             mostrarEndereco();
         } else {
             fetch('https://ipwho.is/')
@@ -49,8 +49,8 @@
                 .then(data => {
                     if (data.city) {
                         const cidadeIP = data.city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-                        // Aceita Taubaté ou cidades vizinhas da região se necessário
-                        if (cidadeIP.includes('taubate') || cidadeIP.includes('tremembe')) {
+                        // Aceita São Bernardo do Campo ou cidades vizinhas da região se necessário
+                        if (cidadeIP.includes('sao bernardo do campo') || cidadeIP.includes('santo andre')) {
                             mostrarEndereco();
                         }
                     }
