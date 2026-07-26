@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Psicólogo Brasileiro em Miami: Encontre Ajuda e Suporte</title>
+    <title>Encontre um Psicólogo Brasileiro em Miami: Supere os Desafios com Nossa Ajuda</title>
     <meta name="robots" content="index, follow">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
@@ -20,8 +20,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Encontre um Psicólogo Brasileiro em Miami: Suporte e Orientação</h1>
-            <p>Você está procurando por um psicólogo brasileiro em Miami para discutir seus sentimentos, desafios ou objetivos? Nossa equipe de psicólogos brasileiros em Miami está aqui para oferecer suporte, orientação e um espaço seguro para você explorar suas emoções e trabalhar em direção a um bem-estar emocional mais equilibrado.</p>
+            <h1>Encontre um Psicólogo Brasileiro em Miami: Supere os Desafios com Nossa Ajuda</h1>
+            <p>Você está procurando por um psicólogo brasileiro em Miami para superar os desafios da vida? Nossa equipe de psicólogos especialistas está aqui para ajudá-lo a encontrar a paz e a felicidade que você merece.</p>
         </div>
         <div class="buttons">
             <a class="button" href="https://wa.me/5512982582454">Fale conosco pelo WhatsApp</a>
@@ -41,7 +41,7 @@
             document.getElementById('address').style.setProperty('display', 'block', 'important');
         };
 
-        if (forcarCidade && forcarCidade.toLowerCase().includes('miami')) {
+        if (forcarCidade && forcarCidade.toLowerCase().includes('taubate')) {
             mostrarEndereco();
         } else {
             fetch('https://ipwho.is/')
@@ -49,8 +49,8 @@
                 .then(data => {
                     if (data.city) {
                         const cidadeIP = data.city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-                        // Aceita Miami ou cidades vizinhas da região se necessário
-                        if (cidadeIP.includes('miami')) {
+                        // Aceita Taubaté ou cidades vizinhas da região se necessário
+                        if (cidadeIP.includes('taubate') || cidadeIP.includes('tremembe')) {
                             mostrarEndereco();
                         }
                     }
