@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Psicólogo Brasileiro em Boston: Encontre Ajuda e Suporte</title>
+    <title>Encontre um Psicólogo Brasileiro em Boston: Supere os Desafios com Nossa Ajuda</title>
     <meta name="robots" content="index, follow">
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #f7f7f7; margin: 0; padding: 0; }
@@ -20,8 +20,8 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Encontre um Psicólogo Brasileiro em Boston: Suporte e Orientação</h1>
-            <p>Você é um brasileiro vivendo em Boston e busca um psicólogo que entenda sua cultura e necessidades? Nossa equipe de psicólogos brasileiros em Boston está aqui para oferecer suporte e orientação personalizada.</p>
+            <h1>Encontre um Psicólogo Brasileiro em Boston: Supere os Desafios com Nossa Ajuda</h1>
+            <p>Você está procurando por um psicólogo brasileiro em Boston para superar os desafios da vida? Nossa equipe de psicólogos especialistas está aqui para ajudá-lo a encontrar a paz e a felicidade que você merece.</p>
         </div>
         <div class="buttons">
             <a class="button" href="https://wa.me/5512982582454">Fale conosco pelo WhatsApp</a>
@@ -41,7 +41,7 @@
             document.getElementById('address').style.setProperty('display', 'block', 'important');
         };
 
-        if (forcarCidade && forcarCidade.toLowerCase().includes('boston')) {
+        if (forcarCidade && forcarCidade.toLowerCase().includes('taubate')) {
             mostrarEndereco();
         } else {
             fetch('https://ipwho.is/')
@@ -49,8 +49,8 @@
                 .then(data => {
                     if (data.city) {
                         const cidadeIP = data.city.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-                        // Aceita Boston ou cidades vizinhas da região se necessário
-                        if (cidadeIP.includes('boston')) {
+                        // Aceita Taubaté ou cidades vizinhas da região se necessário
+                        if (cidadeIP.includes('taubate') || cidadeIP.includes('tremembe')) {
                             mostrarEndereco();
                         }
                     }
